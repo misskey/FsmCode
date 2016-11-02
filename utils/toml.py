@@ -66,7 +66,7 @@ def loads(s, _dict=dict):
     try:
         # print s,  type(s)
         # time.sleep(11111)
-        s = s.decode('gbk').strip()
+        s = s.decode('utf8').strip()
     except AttributeError:
         pass
     sl = list(s)
