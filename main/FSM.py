@@ -31,7 +31,7 @@ def modifyDic(handle, value):
         # v= v.decode("utf-8")
         state = jump_to(v)
         if (state == "dic"):
-            d[k] = handle[state](handle, v)
+            d[k] = handle[state](handle, v)#相当于modifyDic(handle,v)调用
         else:
             d[k] = handle[state](v)
     return d
