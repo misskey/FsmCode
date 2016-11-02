@@ -1,7 +1,10 @@
 # This software is released under the MIT license
-
+import sys
 import re
 import datetime
+import time
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 class TomlDecodeError(Exception):
     pass
@@ -61,7 +64,9 @@ def loads(s, _dict=dict):
     if not isinstance(s, basestring):
         raise TypeError("What exactly are you trying to pull?")
     try:
-        s = s.decode('utf8')
+        # print s,  type(s)
+        # time.sleep(11111)
+        s = s.decode('utf8').strip()
     except AttributeError:
         pass
     sl = list(s)

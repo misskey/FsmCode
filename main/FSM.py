@@ -8,6 +8,8 @@ import sys
 import unparse as unparse
 import utils.toml
 import utils.xmltodict
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 if sys.version_info < (3,):
     _range = xrange
@@ -26,6 +28,7 @@ def modifyDic(handle, value):
     d = {}
     for k, v in iteritems(value):
         # print handle[jump_to(v)]
+        # v= v.decode("utf-8")
         state = jump_to(v)
         if (state == "dic"):
             d[k] = handle[state](handle, v)

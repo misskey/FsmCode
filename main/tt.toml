@@ -1,9 +1,9 @@
-
+title = "TOML 例子"
 [owner]
 name = "Tom Preston-Werner"
 organization = "GitHub"
 bio = "GitHub Cofounder & CEO\nLikes tater tots and beer."
-dob = 1979-05-27T07:32:00Z
+dob = 1979-05-27T07:32:00Z # 日期时间是一等公民。为什么不呢？
 
 [database]
 server = "192.168.1.1"
