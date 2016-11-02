@@ -5,7 +5,6 @@ from glob import glob
 import json
 from os.path import dirname, abspath, join
 import sys
-import unparse as unparse
 import utils.toml
 import utils.xmltodict
 reload(sys)
